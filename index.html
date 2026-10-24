@@ -339,6 +339,35 @@ section.block.tight { padding: 52px 0; }
   section.block { padding: 52px 0; }
   .cta-band .shell { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---------- Legal pages ---------- */
+.legal-wrap { display: grid; grid-template-columns: 250px 1fr; gap: 56px; align-items: start; }
+.legal-toc { position: sticky; top: 96px; font-size: 13.5px; border-left: 2px solid var(--border); padding-left: 18px; }
+.legal-toc h4 { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; }
+.legal-toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.legal-toc a { color: var(--text-muted); }
+.legal-toc a:hover { color: var(--text); text-decoration: underline; }
+.legal-body { max-width: 74ch; }
+.legal-body .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 13px; color: var(--text-muted); padding-bottom: 22px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+.legal-body .notice { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: var(--radius); padding: 16px 18px; font-size: 14.5px; margin: 22px 0 6px; }
+.legal-body h2 { font-size: 22px; margin: 38px 0 12px; scroll-margin-top: 90px; }
+.legal-body h3 { font-size: 16.5px; margin: 22px 0 8px; }
+.legal-body p { margin: 0 0 14px; font-size: 15.5px; line-height: 1.7; }
+.legal-body ul { margin: 0 0 16px; padding-left: 22px; }
+.legal-body li { margin-bottom: 7px; font-size: 15.5px; line-height: 1.65; }
+.legal-body a.inline { color: var(--navy); text-decoration: underline; text-underline-offset: 2px; font-weight: 500; }
+:root[data-theme="dark"] .legal-body a.inline { color: var(--gold-light); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .legal-body a.inline { color: var(--gold-light); } }
+.legal-body table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 6px 0 18px; display: block; overflow-x: auto; }
+.legal-body th, .legal-body td { text-align: left; padding: 10px 12px; border: 1px solid var(--border); vertical-align: top; min-width: 130px; }
+.legal-body th { background: var(--surface); font-weight: 600; }
+.legal-body .fill { background: rgba(199,154,63,0.18); padding: 0 4px; border-radius: 2px; }
+.footer-legal { display: flex; gap: 18px; flex-wrap: wrap; }
+.footer-legal a:hover { color: var(--gold-light); }
+@media (max-width: 900px) {
+  .legal-wrap { grid-template-columns: 1fr; gap: 26px; }
+  .legal-toc { position: static; }
+}
 </style>
 </head>
 <body>
@@ -918,7 +947,7 @@ section.block.tight { padding: 52px 0; }
             </div>
           </div>
           <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center;">Send Request</button>
-          <p class="form-note" style="margin-top:12px;">Requests are emailed directly — no account or sign-up needed.</p>
+          <p class="form-note" style="margin-top:12px;">Requests are emailed directly — no account or sign-up needed. By sending this you agree to our <a href="#terms" data-route="terms" style="text-decoration:underline;">Terms</a> and <a href="#privacy" data-route="privacy" style="text-decoration:underline;">Privacy Policy</a>. Please do not include passwords or PINs.</p>
         </form>
       </div>
     </div>
@@ -1028,9 +1057,263 @@ section.block.tight { padding: 52px 0; }
             <div class="error-msg" id="err-message">Please tell us a little about what you need.</div>
           </div>
           <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center;">Send Message</button>
-          <p class="form-note" style="margin-top:12px;">Messages are emailed directly — no account or sign-up needed.</p>
+          <p class="form-note" style="margin-top:12px;">Messages are emailed directly — no account or sign-up needed. By sending this you agree to our <a href="#terms" data-route="terms" style="text-decoration:underline;">Terms</a> and <a href="#privacy" data-route="privacy" style="text-decoration:underline;">Privacy Policy</a>. Please do not include passwords or PINs.</p>
         </form>
       </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- ================= TERMS ================= -->
+<section class="page" id="page-terms" data-title="Terms & Conditions — AK Auditor &amp; Tax Consultant">
+  <div class="page-hero">
+    <div class="shell">
+      <div class="crumb"><a href="#home" data-route="home">Home</a> &nbsp;/&nbsp; Legal</div>
+      <div class="eyebrow-line"><span style="color:var(--gold-light)">LEGAL</span></div>
+      <h1>Terms &amp; Conditions</h1>
+      <p class="sub">The rules for using this website and for working with AK Auditor &amp; Tax Consultant.</p>
+    </div>
+  </div>
+  <section class="block tight">
+    <div class="shell legal-wrap">
+      <aside class="legal-toc" aria-label="On this page"><h4>ON THIS PAGE</h4><ol><li><a href="#terms" onclick="jumpTo(event,'terms-1')">1. Acceptance of these terms</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-2')">2. Who we are</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-3')">3. Website content is general information</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-4')">4. Engaging our services</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-5')">5. Your responsibilities as a client</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-6')">6. Tax compliance and filings</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-7')">7. Professional standards and confidentiality</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-8')">8. Anti-money laundering and legal compliance</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-9')">9. Fees and payment</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-10')">10. Resources and downloads</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-11')">11. Intellectual property</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-12')">12. Acceptable use of this website</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-13')">13. Forms, messages and communication channels</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-14')">14. Third-party links and services</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-15')">15. Disclaimers and limitation of liability</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-16')">16. Indemnity</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-17')">17. Termination</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-18')">18. Governing law and disputes</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-19')">19. Changes to these terms</a></li><li><a href="#terms" onclick="jumpTo(event,'terms-20')">20. Contact</a></li></ol></aside>
+      <article class="legal-body">
+        <div class="meta"><span>Last updated: 23 October 2026</span><span>Applies to: Kenya</span><span>Also read: <a class="inline" href="#privacy" data-route="privacy">Privacy Policy</a></span></div>
+        <div class="notice">Plain-language summary: this website gives general information only, not personal advice. Services start with a signed engagement letter. You are responsible for giving us complete, accurate records on time. We follow professional ethics and Kenyan law, including anti-money-laundering rules, and we will not help with tax evasion.</div>
+        
+<h2 id="terms-1">1. Acceptance of these terms</h2>
+<p>These Terms and Conditions ("Terms") govern your use of this website and any enquiry, resource request or communication you make through it. By using the website you confirm that you have read and accepted these Terms and our <a class="inline" href="#privacy" data-route="privacy">Privacy Policy</a>. If you do not agree, please do not use the website.</p>
+<p>Professional services (audit, tax, analytics, advisory) are provided only under a separate written engagement letter, which takes priority over these Terms if the two conflict.</p>
+
+<h2 id="terms-2">2. Who we are</h2>
+<p>This website is operated by AK Auditor &amp; Tax Consultant ("AK", "we", "us"), led by George, an auditor and tax consultant based in Kenya. Our registered details are:</p>
+<ul>
+  <li>Registered business name: <span class="fill">[registered name / entity type]</span></li>
+  <li>KRA PIN: <span class="fill">[KRA PIN]</span></li>
+  <li>Professional registration: <span class="fill">[ICPAK membership no. / practising certificate no.]</span></li>
+  <li>Physical address: <span class="fill">[office address, Nairobi]</span></li>
+  <li>Phone / WhatsApp: +254 746 369 087 &nbsp;|&nbsp; Email: vanywinner@gmail.com</li>
+</ul>
+
+<h2 id="terms-3">3. Website content is general information</h2>
+<p>Articles, insights, calculators, checklists and other content here are provided for general information only. They are <strong>not</strong> audit, tax, legal or financial advice and must not be relied on as such. Tax law in Kenya, including the Income Tax Act, the Value Added Tax Act, the Tax Procedures Act, the Finance Acts and KRA practice notes, changes often. Content may be out of date or may not fit your circumstances. Please get advice specific to your situation before acting.</p>
+<p>No accountant–client or adviser–client relationship is created by reading this website, sending a message, or receiving a reply to a general enquiry.</p>
+
+<h2 id="terms-4">4. Engaging our services</h2>
+<ul>
+  <li>A client relationship begins only when you and AK have both signed (or electronically accepted) an engagement letter that sets out the scope, deliverables, timelines, responsibilities and fees.</li>
+  <li>Work outside the agreed scope, such as responding to a KRA audit, objection or appeal, is separate work that needs to be agreed in writing.</li>
+  <li>We may decline or stop work where we have a conflict of interest, where independence would be compromised, or where we cannot meet professional or legal requirements.</li>
+  <li>Statutory audits and assurance engagements are carried out in line with applicable auditing standards, the Companies Act, 2015 and the requirements of ICPAK and the Public Accountants Examinations, Registration &amp; Licensing Board where they apply.</li>
+</ul>
+
+<h2 id="terms-5">5. Your responsibilities as a client</h2>
+<p>For us to do good work, you agree to:</p>
+<ul>
+  <li>give us complete, accurate and timely information, records and explanations, and tell us promptly if anything changes;</li>
+  <li>keep proper books and records as required by law, and keep original documents (invoices, receipts, bank statements, contracts, payroll records) for the periods the law requires;</li>
+  <li>review and approve returns, financial statements and other deliverables before they are submitted or relied on; you remain responsible for the information they contain;</li>
+  <li>meet agreed deadlines for providing information, so that statutory filing dates can be met;</li>
+  <li>keep your own KRA iTax, eTIMS and other portal credentials secure, and only share access in line with what is agreed in the engagement letter.</li>
+</ul>
+
+<h2 id="terms-6">6. Tax compliance and filings</h2>
+<ul>
+  <li><strong>Based on your information.</strong> We prepare returns, computations and advice using the information you give us. Unless we agree otherwise in writing, we do not independently verify it beyond what is needed for the agreed work.</li>
+  <li><strong>Filing deadlines.</strong> Statutory dates, for example monthly VAT and PAYE by the 20th of the following month and annual income tax returns by 30 June, are fixed by law. Late or missing information from you can lead to late filing; penalties and interest that result from late, incomplete or inaccurate information you supplied are your responsibility.</li>
+  <li><strong>Penalties and interest.</strong> Tax, penalties and interest assessed by the Kenya Revenue Authority (KRA) or any other authority are liabilities of the taxpayer. We are responsible only where they result from our negligence or breach of the engagement, and subject to section 15.</li>
+  <li><strong>No guaranteed outcomes.</strong> We cannot guarantee any tax saving, refund, assessment outcome, audit opinion or the position KRA or a court will take. Where law is unclear, we will explain our reasoning and the risk, but the decision to adopt a position is yours.</li>
+  <li><strong>Lawful tax planning only.</strong> We help clients minimise tax lawfully. We will not help with tax evasion, false or inflated claims, hidden income, falsified documents or any scheme designed to mislead KRA. Where we discover such conduct we may be required, or may choose, to stop acting and, where the law requires, to report it.</li>
+  <li><strong>Portal access and authorisations.</strong> Where you authorise us to act on your behalf with KRA (for example as a tax agent), you confirm you have the authority to do so and that we may act only within the scope you approve. You may withdraw that authority at any time in writing.</li>
+  <li><strong>Voluntary disclosure.</strong> If we find past errors or omissions, we will explain your options, including voluntary disclosure to KRA, but we will not make disclosures on your behalf without your instruction unless the law requires it.</li>
+</ul>
+
+<h2 id="terms-7">7. Professional standards and confidentiality</h2>
+<p>We act with integrity, objectivity, professional competence and due care, in line with the ICPAK Code of Ethics (based on the IESBA Code). We treat information you give us as confidential and use it only for the agreed work.</p>
+<p>We may disclose confidential information only where: you have given consent; the law, a court order or a regulator requires it (for example KRA, the Financial Reporting Centre, the Public Accountants Examinations, Registration &amp; Licensing Board or ICPAK in a quality review or disciplinary matter); or it is needed to protect our legal rights or defend a claim. Our staff and any subcontractors are bound by confidentiality duties.</p>
+
+<h2 id="terms-8">8. Anti-money laundering and legal compliance</h2>
+<p>As professional accountants we have obligations under the Proceeds of Crime and Anti-Money Laundering Act (POCAMLA) and related regulations. Before and during an engagement we may ask for identification and "know your client" information, such as ID or passport, KRA PIN, company registration and beneficial-ownership details, and information on the source of funds.</p>
+<p>If we have reasonable grounds to suspect money laundering, terrorism financing or other unlawful conduct, the law may require us to make a report to the relevant authority and to refrain from telling you that we have done so. This duty overrides our confidentiality duty and anything in these Terms.</p>
+
+<h2 id="terms-9">9. Fees and payment</h2>
+<ul>
+  <li>Fees are set out in the engagement letter or written quotation. Quotations are valid for the period stated on them.</li>
+  <li>Fees exclude VAT and other applicable taxes (VAT is charged at the prevailing rate where we are required to charge it) and out-of-pocket costs such as government fees, filing fees and travel, unless the quotation says otherwise.</li>
+  <li>Invoices are payable within the period stated on the invoice, by bank transfer, M-Pesa or another method we agree.</li>
+  <li>We may charge reasonable interest on overdue amounts and may pause work, or withhold deliverables to the extent the law allows, until overdue fees are paid.</li>
+  <li>We issue valid tax invoices and receipts for amounts paid.</li>
+</ul>
+
+<h2 id="terms-10">10. Resources and downloads</h2>
+<p>Checklists, templates and guides offered on the Resources page are provided "as is" for general use. They are not tailored to your circumstances, and we do not promise that they are complete, current or suitable for your business. When you request a resource we may contact you about it (see the Privacy Policy). You may use resources for your own internal business purposes but may not resell or republish them.</p>
+
+<h2 id="terms-11">11. Intellectual property</h2>
+<p>The website's text, design, logo, graphics, articles and other materials belong to AK or its licensors and are protected by the Copyright Act, 2001 and other laws. You may view and print pages for personal or internal business use. You may not copy, modify, distribute or commercially exploit any part of the website without our written permission. Work we create for you under an engagement is licensed or assigned as stated in the engagement letter; we keep our working papers and methodologies as the law and professional standards allow.</p>
+
+<h2 id="terms-12">12. Acceptable use of this website</h2>
+<p>You must not: attempt to gain unauthorised access to the website or its systems; introduce malware or interfere with the website's operation; submit false, misleading or unlawful content; use the forms to send spam; or use the website in a way that breaches the Computer Misuse and Cybercrimes Act, 2018 or any other law. We may block access to anyone who breaches this section and may report unlawful activity to the authorities.</p>
+
+<h2 id="terms-13">13. Forms, messages and communication channels</h2>
+<ul>
+  <li>Messages sent through the website forms are delivered to us by email through a third-party form service. Email, WhatsApp and web forms are not fully secure channels.</li>
+  <li><strong>Please do not send passwords, KRA PINs together with iTax passwords, bank PINs, full card numbers or other highly sensitive material through the website forms.</strong> We will tell you how to share documents securely once an engagement starts.</li>
+  <li>We aim to respond to enquiries within a reasonable time, normally within two business days, but we do not promise a response time for general enquiries.</li>
+  <li>We may communicate with you by phone, email or WhatsApp using the details you gave us unless you ask us to stop.</li>
+</ul>
+
+<h2 id="terms-14">14. Third-party links and services</h2>
+<p>The website may link to third-party sites such as KRA's iTax portal, ICPAK, the Office of the Data Protection Commissioner, WhatsApp or social media. We do not control those sites, do not endorse their content, and are not responsible for their availability, accuracy or privacy practices. Your use of them is at your own risk and under their own terms.</p>
+
+<h2 id="terms-15">15. Disclaimers and limitation of liability</h2>
+<ul>
+  <li>The website is provided "as is" and "as available". We do not guarantee that it will be uninterrupted, error-free or free of harmful components.</li>
+  <li>To the fullest extent the law permits, we are not liable for indirect, incidental or consequential loss, or for loss of profit, revenue, goodwill or data, arising from your use of the website or reliance on its general content.</li>
+  <li>For professional services, our liability is governed by the engagement letter. Unless the engagement letter says otherwise, our total liability for any claim arising from an engagement is limited to the fees paid for the specific engagement giving rise to the claim, to the extent the law and our professional indemnity cover permit.</li>
+  <li>Nothing in these Terms excludes or limits liability that cannot lawfully be excluded, including liability for fraud, fraudulent misrepresentation, or death or personal injury caused by negligence, or any rights you have under the Consumer Protection Act, 2012.</li>
+</ul>
+
+<h2 id="terms-16">16. Indemnity</h2>
+<p>You agree to compensate us for loss, penalties, claims or reasonable costs we suffer because you knowingly gave us false or misleading information, withheld material information, or used the website or our deliverables unlawfully, to the extent the law allows.</p>
+
+<h2 id="terms-17">17. Termination</h2>
+<p>Either of us may end an engagement by written notice as set out in the engagement letter. You remain responsible for fees for work done up to termination. On termination we will return or securely dispose of your records as required, subject to our legal duties to keep certain records (see the Privacy Policy) and to keep our own working papers. We may suspend or end access to the website at any time without notice for breach of these Terms.</p>
+
+<h2 id="terms-18">18. Governing law and disputes</h2>
+<p>These Terms are governed by the laws of the Republic of Kenya. If a dispute arises, we will first try to resolve it in good faith by discussion between us. If that fails within 30 days, we will try mediation, and if that does not resolve it, either party may refer it to arbitration under the Arbitration Act, 1995 (Kenya), or bring proceedings in the courts of Kenya, which have jurisdiction, unless the engagement letter says otherwise. Nothing here limits your right to complain to a regulator such as the Office of the Data Protection Commissioner or ICPAK.</p>
+
+<h2 id="terms-19">19. Changes to these terms</h2>
+<p>We may update these Terms from time to time, for example when the law or our services change. The "last updated" date at the top shows the current version. Continued use of the website after an update means you accept it. Changes do not affect an existing engagement letter unless both parties agree in writing. If any part of these Terms is found unenforceable, the rest remains in force.</p>
+
+<h2 id="terms-20">20. Contact</h2>
+<p>Questions about these Terms: <a class="inline" href="mailto:vanywinner@gmail.com">vanywinner@gmail.com</a>, phone or WhatsApp +254 746 369 087.</p>
+
+      </article>
+    </div>
+  </section>
+</section>
+
+<!-- ================= PRIVACY ================= -->
+<section class="page" id="page-privacy" data-title="Privacy Policy — AK Auditor &amp; Tax Consultant">
+  <div class="page-hero">
+    <div class="shell">
+      <div class="crumb"><a href="#home" data-route="home">Home</a> &nbsp;/&nbsp; Legal</div>
+      <div class="eyebrow-line"><span style="color:var(--gold-light)">LEGAL</span></div>
+      <h1>Privacy Policy</h1>
+      <p class="sub">How we collect, use, share and protect your personal and financial information under Kenya’s Data Protection Act, 2019.</p>
+    </div>
+  </div>
+  <section class="block tight">
+    <div class="shell legal-wrap">
+      <aside class="legal-toc" aria-label="On this page"><h4>ON THIS PAGE</h4><ol><li><a href="#privacy" onclick="jumpTo(event,'privacy-1')">1. Who is responsible for your data</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-2')">2. Personal data we collect</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-3')">3. How we collect it</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-4')">4. Why we use your data and our legal basis</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-5')">5. Tax and financial information</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-6')">6. Who we share data with</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-7')">7. Transfers outside Kenya</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-8')">8. How long we keep your data</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-9')">9. How we protect your data</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-10')">10. Your rights</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-11')">11. Cookies, fonts and analytics</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-12')">12. Marketing communications</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-13')">13. Children</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-14')">14. Data breaches</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-15')">15. Changes to this policy</a></li><li><a href="#privacy" onclick="jumpTo(event,'privacy-16')">16. Contact and complaints</a></li></ol></aside>
+      <article class="legal-body">
+        <div class="meta"><span>Last updated: 23 October 2026</span><span>Applies to: Kenya</span><span>Also read: <a class="inline" href="#terms" data-route="terms">Terms &amp; Conditions</a></span></div>
+        <div class="notice">Plain-language summary: we collect only what we need to answer you and do your work, we keep tax and financial records confidential, we never sell data, and we keep records for the periods the law requires. You can ask to see, correct or delete your data, and you can complain to the Data Protection Commissioner.</div>
+        
+<h2 id="privacy-1">1. Who is responsible for your data</h2>
+<p>AK Auditor &amp; Tax Consultant ("AK", "we", "us") is the <strong>data controller</strong> for personal data collected through this website and for our client work. We handle personal data in line with the Data Protection Act, 2019 (Kenya) and the Data Protection (General) Regulations, 2021, and with our professional duty of confidentiality.</p>
+<ul>
+  <li>Registered business name: <span class="fill">[registered name]</span></li>
+  <li>ODPC registration number: <span class="fill">[Office of the Data Protection Commissioner registration no.]</span></li>
+  <li>Data protection contact: George, <a class="inline" href="mailto:vanywinner@gmail.com">vanywinner@gmail.com</a>, +254 746 369 087</li>
+</ul>
+
+<h2 id="privacy-2">2. Personal data we collect</h2>
+<table>
+  <thead><tr><th>When</th><th>What we collect</th></tr></thead>
+  <tbody>
+    <tr><td>Contact form</td><td>Name, phone (optional), email, service of interest, and what you write in your message.</td></tr>
+    <tr><td>Resource request form</td><td>Name, email, the resource you asked for, and any other details you add.</td></tr>
+    <tr><td>Calls, email, WhatsApp</td><td>Your number or email address, and the content of our communications.</td></tr>
+    <tr><td>Onboarding as a client</td><td>ID or passport details, KRA PIN, company registration and ownership details, contact and address details, and KYC/AML information.</td></tr>
+    <tr><td>Doing the work</td><td>Financial and tax records you provide: books of account, invoices, bank and M-Pesa statements, payroll and PAYE records, VAT and income tax returns, contracts, and employee or director details needed for the engagement.</td></tr>
+    <tr><td>Website visits</td><td>Basic technical data your browser sends, such as IP address, browser type and pages requested (see section 11).</td></tr>
+  </tbody>
+</table>
+<p>Please send us only what is needed. If you give us personal data about other people (employees, directors, customers), you confirm that you are entitled to share it with us for the agreed purpose.</p>
+
+<h2 id="privacy-3">3. How we collect it</h2>
+<p>Mostly directly from you: through the website forms, in conversation, and when you send documents. In some engagements we also receive information from third parties you authorise, such as your bookkeeper, bank, payroll provider or, with your authority, from the KRA iTax portal and public registers (for example the Business Registration Service).</p>
+
+<h2 id="privacy-4">4. Why we use your data and our legal basis</h2>
+<table>
+  <thead><tr><th>Purpose</th><th>Legal basis (Data Protection Act, 2019)</th></tr></thead>
+  <tbody>
+    <tr><td>Reply to enquiries and send a resource you requested</td><td>Your consent and steps you ask us to take before entering a contract</td></tr>
+    <tr><td>Provide audit, tax, analytics and advisory services, issue invoices, collect fees</td><td>Performance of a contract with you</td></tr>
+    <tr><td>Prepare and file returns, respond to KRA, keep tax and accounting records, perform KYC and AML checks, make reports required by law</td><td>Compliance with a legal obligation (for example the Tax Procedures Act, Income Tax Act, VAT Act, Companies Act and POCAMLA)</td></tr>
+    <tr><td>Maintain independence, manage conflicts and quality, protect against fraud, defend legal claims, keep the website secure</td><td>Our legitimate interests, balanced against your rights</td></tr>
+    <tr><td>Send updates, tax-calendar reminders or newsletters</td><td>Your consent, which you can withdraw at any time</td></tr>
+  </tbody>
+</table>
+<p>We do not sell your personal data and we do not use it for automated decision-making that has legal or similarly significant effects on you.</p>
+
+<h2 id="privacy-5">5. Tax and financial information</h2>
+<p>Tax and financial records can reveal a lot about a person or business, so we treat them with extra care. We limit access to the people working on your engagement, use the data only for the agreed purpose, and do not use it to market to you or share it with other clients. Where we hold data that the Act classes as sensitive personal data, we process it only where the law permits and apply stronger safeguards.</p>
+<p>When you give us KRA iTax or other portal access, we use it only for the agreed filings, we recommend you change passwords at the end of the engagement, and we ask that you never send us passwords through the website forms.</p>
+
+<h2 id="privacy-6">6. Who we share data with</h2>
+<p>We share personal data only as needed, and only with:</p>
+<ul>
+  <li><strong>Authorities and regulators</strong>, such as KRA, the Financial Reporting Centre, the Registrar of Companies, ICPAK, the Public Accountants Examinations, Registration &amp; Licensing Board, courts, or the ODPC, where the law requires it or you ask us to file or correspond on your behalf;</li>
+  <li><strong>Service providers</strong> that help us run the website and practice, such as the form-handling service that emails us your form submissions (FormSubmit), email and cloud-storage providers (for example Google), messaging apps (WhatsApp), and accounting or tax software. They may use your data only on our instructions and must protect it;</li>
+  <li><strong>Professional advisers</strong>, such as our lawyers, insurers or auditors, under a duty of confidentiality;</li>
+  <li><strong>Other parties you authorise</strong>, such as your bank, bookkeeper or lawyer;</li>
+  <li><strong>A buyer or successor</strong> of our practice, if it is ever transferred, under equivalent confidentiality and protection obligations.</li>
+</ul>
+
+<h2 id="privacy-7">7. Transfers outside Kenya</h2>
+<p>Some of our providers (for example email, cloud and form-handling services) store or process data on servers outside Kenya. Where that happens we transfer data only as the Data Protection Act, 2019 allows: to providers that offer appropriate safeguards, or with your consent, or where the transfer is necessary to perform a contract with you. Contact us for details of the safeguards in place.</p>
+
+<h2 id="privacy-8">8. How long we keep your data</h2>
+<table>
+  <thead><tr><th>Data</th><th>Retention</th></tr></thead>
+  <tbody>
+    <tr><td>Website enquiries that do not lead to an engagement</td><td>Up to <span class="fill">12 months</span>, then deleted</td></tr>
+    <tr><td>Resource requests and marketing subscriptions</td><td>Until you withdraw consent or unsubscribe</td></tr>
+    <tr><td>Client tax and accounting records and working papers</td><td>At least <span class="fill">7 years</span> after the end of the engagement or the tax period concerned (the Tax Procedures Act requires taxpayer records to be kept for at least five years, and professional, company-law and AML rules may require longer)</td></tr>
+    <tr><td>KYC and AML records</td><td>As long as POCAMLA requires after the business relationship ends (currently at least seven years)</td></tr>
+    <tr><td>Data needed for a live dispute or investigation</td><td>Until the matter is closed</td></tr>
+  </tbody>
+</table>
+<p>When the retention period ends we securely delete or anonymise the data. Because the law requires us to keep some records, we may not be able to delete them on request while the obligation lasts.</p>
+
+<h2 id="privacy-9">9. How we protect your data</h2>
+<p>We use technical and organisational measures proportionate to the risk, including password-protected and encrypted devices, access restricted to those who need it, regular backups, secure disposal of records, and confidentiality commitments from anyone who works with your data. No method of storage or transmission is completely secure, and email, WhatsApp and web forms in particular are not guaranteed secure, so please avoid sending highly sensitive information through them.</p>
+
+<h2 id="privacy-10">10. Your rights</h2>
+<p>Under the Data Protection Act, 2019 you have the right to:</p>
+<ul>
+  <li>be informed about how your data is used (this policy);</li>
+  <li>access the personal data we hold about you;</li>
+  <li>object to our processing of your data, including for direct marketing;</li>
+  <li>have inaccurate or incomplete data corrected;</li>
+  <li>have data deleted where we no longer need it or have no lawful basis to keep it, subject to our legal retention duties;</li>
+  <li>receive your data in a structured, commonly used format (data portability) where it applies;</li>
+  <li>withdraw consent at any time, without affecting processing already done.</li>
+</ul>
+<p>To use any of these rights, email <a class="inline" href="mailto:vanywinner@gmail.com">vanywinner@gmail.com</a>. We may ask you to confirm your identity first, and we will respond within the time the law requires. There is no charge for ordinary requests.</p>
+
+<h2 id="privacy-11">11. Cookies, fonts and analytics</h2>
+<p>This website does not use advertising or tracking cookies. To display text correctly it loads fonts from Google Fonts, which means your browser connects to Google's servers and Google receives your IP address and basic browser information. If we add analytics or other cookies in future, we will update this policy and ask for your consent where the law requires it. You can control cookies in your browser settings.</p>
+
+<h2 id="privacy-12">12. Marketing communications</h2>
+<p>We send newsletters, tax-deadline reminders or service updates only if you have asked for them or otherwise agreed. Every message includes a way to unsubscribe, and you can also tell us at any time to stop. We will not use your data to send marketing for other businesses.</p>
+
+<h2 id="privacy-13">13. Children</h2>
+<p>This website and our services are intended for adults and businesses. We do not knowingly collect personal data from children. If you believe a child has sent us data, please contact us and we will delete it. If we must handle a child's data in an engagement (for example, a trust or estate matter), we do so with the consent of a parent or guardian as the law requires.</p>
+
+<h2 id="privacy-14">14. Data breaches</h2>
+<p>If a personal data breach is likely to put your rights and freedoms at risk, we will notify the Office of the Data Protection Commissioner within 72 hours of becoming aware of it, and will tell affected people without unreasonable delay where the risk is high, explaining what happened and what you can do.</p>
+
+<h2 id="privacy-15">15. Changes to this policy</h2>
+<p>We may update this policy as our services or the law change. The "last updated" date at the top shows the current version, and for significant changes we will take reasonable steps to tell you.</p>
+
+<h2 id="privacy-16">16. Contact and complaints</h2>
+<p>Questions or requests: <a class="inline" href="mailto:vanywinner@gmail.com">vanywinner@gmail.com</a>, phone or WhatsApp +254 746 369 087. If you are not satisfied with how we handled your data, you have the right to complain to the <strong>Office of the Data Protection Commissioner</strong> (Kenya) at <a class="inline" href="https://www.odpc.go.ke" target="_blank" rel="noopener">www.odpc.go.ke</a>. We would appreciate the chance to put things right first.</p>
+
+      </article>
     </div>
   </section>
 </section>
@@ -1063,6 +1346,8 @@ section.block.tight { padding: 52px 0; }
         <li><a href="#resources" data-route="resources">Resources</a></li>
         <li><a href="#contact" data-route="contact">Contact</a></li>
         <li><a href="#contact" data-route="contact">Book a Consultation</a></li>
+        <li><a href="#terms" data-route="terms">Terms &amp; Conditions</a></li>
+        <li><a href="#privacy" data-route="privacy">Privacy Policy</a></li>
       </ul>
     </div>
     <div>
@@ -1076,7 +1361,7 @@ section.block.tight { padding: 52px 0; }
   </div>
   <div class="shell footer-bottom">
     <span>&copy; <span id="yr"></span> AK Auditor &amp; Tax Consultant. All rights reserved.</span>
-    <span>Compliance today. Growth tomorrow.</span>
+    <span class="footer-legal"><a href="#terms" data-route="terms">Terms &amp; Conditions</a><a href="#privacy" data-route="privacy">Privacy Policy</a></span>
   </div>
   <div class="shell" style="text-align:center; margin-top:16px;">
     <a href="https://wa.me/254715672799" target="_blank" rel="noopener" style="font-size:12px; color:#8A93A3; transition:color .15s;" onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='#8A93A3'">Developed by Vanywinner Enterprises</a>
@@ -1114,6 +1399,11 @@ function route(){
     a.classList.toggle('active', a.dataset.route === hash || (!found && a.dataset.route === 'home'));
   });
   window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+}
+function jumpTo(e, id){
+  e.preventDefault();
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
 }
 window.addEventListener('hashchange', route);
 route();
